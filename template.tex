@@ -1,0 +1,308 @@
+%%%This is a science homework template. Modify the preamble to suit your needs. 
+
+\documentclass[12pt]{article}
+
+\makeatother
+%AMS-TeX packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{cancel}
+\usepackage[all,cmtip]{xy}%Commutative Diagrams
+\usepackage[pdftex]{graphicx}
+\usepackage{float}
+%geometry (sets margin) and other useful packages
+\usepackage[margin=1in]{geometry}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage{verbatim}
+\usepackage{mathrsfs}
+\usepackage{marvosym}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\usepackage{graphicx,ctable,booktabs}
+
+\newtheoremstyle{norm}
+{3pt}
+{3pt}
+{}
+{}
+{\bf}
+{:}
+{.5em}
+{}
+
+\theoremstyle{norm}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{df}{Definition}
+\newtheorem{rem}{Remark}
+\newtheorem{st}{Step}
+\newtheorem{pr}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{clm}[thm]{Claim}
+
+\newcommand{\A}[0]{\mathbb{A}}
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\sC}[0]{\mathcal{C}}
+\newcommand{\cE}[0]{\mathscr{E}}
+\newcommand{\F}[0]{\mathbb{F}}
+\newcommand{\cF}[0]{\mathscr{F}}
+\newcommand{\sF}[0]{\mathscr{F}}
+\newcommand{\cG}[0]{\mathscr{G}}
+\newcommand{\sH}[0]{\mathscr H}
+\newcommand{\Hq}[0]{\mathbb{H}}
+\newcommand{\I}[0]{\mathbb{I}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\Pj}[0]{\mathbb{P}}
+\newcommand{\sO}[0]{\mathcal{O}}
+\newcommand{\cO}[0]{\mathscr{O}}
+\newcommand{\Q}[0]{\mathbb{Q}}
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\Z}[0]{\mathbb{Z}}
+%Lowercase
+\newcommand{\ma}[0]{\mathfrak{a}}%ideal a
+\newcommand{\mb}[0]{\mathfrak{b}}
+\newcommand{\mc}[0]{\mathfrak{c}}
+\newcommand{\mf}[0]{\mathfrak{f}}
+\newcommand{\fg}[0]{\mathfrak{g}}
+\newcommand{\vi}[0]{\mathbf{i}}%vector i
+\newcommand{\vj}[0]{\mathbf{j}}
+\newcommand{\vk}[0]{\mathbf{k}}
+\newcommand{\mm}[0]{\mathfrak{m}}%ideal m
+\newcommand{\mfp}[0]{\mathfrak{p}}
+\newcommand{\mP}[0]{\mathfrak{P}}
+\newcommand{\mq}[0]{\mathfrak{q}}
+\newcommand{\mQ}[0]{\mathfrak{Q}}
+\newcommand{\mr}[0]{\mathfrak{r}}
+%More sequences of letters
+\newcommand{\fq}[0]{\mathbb{F}_q}
+\newcommand{\fqt}[0]{\mathbb{F}_q^{\times}}
+\newcommand{\sll}[0]{\mathfrak{sl}}
+%Shortcuts for symbols
+\newcommand{\nin}[0]{\not\in}
+\newcommand{\opl}[0]{\oplus}
+\newcommand{\ot}[0]{\otimes}
+\newcommand{\rc}[1]{\frac{1}{#1}}
+\newcommand{\sub}[0]{\subset}
+\newcommand{\subeq}[0]{\subseteq}
+\newcommand{\supeq}[0]{\supseteq}
+\newcommand{\nsubeq}[0]{\not\subseteq}
+\newcommand{\nsupeq}[0]{\not\supseteq}
+\newcommand{\nequiv}[0]{\not\equiv}
+%Arrows
+\newcommand{\lar}[0]{\leftarrow}
+\newcommand{\ra}[0]{\rightarrow}
+\newcommand{\lra}[0]{\leftrightarrow}
+\newcommand{\rra}[0]{\rightrightarrow}
+\newcommand{\hra}[0]{\hookrightarrow}
+\newcommand{\send}[0]{\mapsto}
+\newcommand{\xra}[1]{\xrightarrow{#1}}
+\newcommand{\tra}[0]{\twoheadedrightarrow}
+%Shortcuts for greek letters
+\newcommand{\al}[0]{\alpha}
+\newcommand{\be}[0]{\beta}
+\newcommand{\ga}[0]{\gamma}
+\newcommand{\Ga}[0]{\Gamma}
+\newcommand{\de}[0]{\delta}
+\newcommand{\De}[0]{\Delta}
+\newcommand{\ep}[0]{\varepsilon}
+\newcommand{\eph}[0]{\frac{\varepsilon}{2}}
+\newcommand{\ept}[0]{\frac{\varepsilon}{3}}
+\newcommand{\la}[0]{\lambda}
+\newcommand{\La}[0]{\Lambda}
+\newcommand{\ph}[0]{\varphi}
+\newcommand{\rh}[0]{\rho}
+\newcommand{\te}[0]{\theta}
+\newcommand{\om}[0]{\omega}
+\newcommand{\Om}[0]{\Omega}
+\newcommand{\si}[0]{\sigma}
+\newcommand{\ze}[0]{\zeta}
+%Brackets
+\newcommand{\ab}[1]{\left| {#1} \right|}
+\newcommand{\an}[1]{\langle {#1}\rangle}
+\newcommand{\ba}[1]{\left[ {#1} \right]}
+\newcommand{\bc}[1]{\left\{ {#1} \right\}}
+\newcommand{\ce}[1]{\left\lceil {#1}\right\rceil}
+\newcommand{\fl}[1]{\left\lfloor {#1}\right\rfloor}
+\newcommand{\pa}[1]{\left( {#1} \right)}
+\newcommand{\ve}[1]{\left\Vert {#1}\right\Vert}
+%Text
+\newcommand{\btih}[1]{\text{ by the induction hypothesis{#1}}}
+\newcommand{\bwoc}[0]{by way of contradiction}
+\newcommand{\by}[1]{\text{by~(\ref{#1})}}
+\newcommand{\ore}[0]{\text{ or }}
+\newcommand{\wog}[0]{ without loss of generality }
+\newcommand{\Wog}[0]{ Without loss of generality }
+%Functions, etc.
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Frob}{\operatorname{Frob}}
+\newcommand{\FS}{\operatorname{FS}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\chom}[0]{\mathscr{H}om}
+\newcommand{\Ind}[0]{\text{Ind}}
+\newcommand{\inv}[0]{\text{inv}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\im}[0]{\text{im}}
+\newcommand{\Li}[0]{\operatorname{li}}
+\newcommand{\lcm}[0]{\operatorname{lcm}}
+\newcommand{\nil}[0]{\operatorname{nil}}
+\newcommand{\nm}{\operatorname{Norm}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\PDer}{\operatorname{PDer}}
+\newcommand{\PGL}{\operatorname{PGL}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\newcommand{\Per}{\operatorname{Per}}
+\newcommand{\PrePer}{\operatorname{PrePer}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\Rad}{\operatorname{Rad}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\red}{\operatorname{red}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Specf}[2]{\Spec\pa{\frac{k[{#1}]}{#2}}}
+\newcommand{\Spl}{\operatorname{Spl}}
+\newcommand{\spp}{\operatorname{sp}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\tr}[0]{\text{Tr}}
+\providecommand{\cal}[1]{\mathcal{#1}}
+\renewcommand{\cal}[1]{\mathcal{#1}}
+%Commutative diagram shortcuts
+\newcommand{\commsq}[8]{\xymatrix{#1\ar[r]^{#6}\ar[d]^{#5} &#2\ar[d]^{#7} \\ #3 \ar[r]^{#8} & #4}}
+%Makes a diagram like this
+%1->2
+%|    |
+%3->4
+%Arguments 5, 6, 7, 8 on arrows
+%  6
+%5  7
+%  8
+\newcommand{\pull}[9]{
+#1\ar@/_/[ddr]_{#2} \ar@{.>}[rd]^{#3} \ar@/^/[rrd]^{#4} & &\\
+& #5\ar[r]^{#6}\ar[d]^{#8} &#7\ar[d]^{#9} \\}
+\newcommand{\back}[3]{& #1 \ar[r]^{#2} & #3}
+%Syntax:\pull 123456789 \back ABC
+%1=upper left-hand corner
+%2,3,4=arrows from upper LH corner, going down, diagonal, right
+%5,6,7=top row (6 on arrow)
+%8,9=middle rows (on arrows)
+%A,B,C=bottom row
+%Other
+\newcommand{\op}{^{\text{op}}}
+\newcommand{\fp}[1]{^{\underline{#1}}}%Falling power
+\newcommand{\rp}[1]{^{\overline{#1}}}
+\newcommand{\rd}[0]{_{\text{red}}}
+\newcommand{\pre}[0]{^{\text{pre}}}
+\newcommand{\prc}[1]{\pa{\rc{#1}}}
+\newcommand{\ff}[2]{\left\lfloor\frac{#1}{#2}\right\rfloor}
+\newcommand{\pf}[2]{\pa{\frac{#1}{#2}}}%Shortcut for fraction with parentheses
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}%Partial derivatives
+\newcommand{\bs}[0]{\backslash}
+\newcommand{\iy}[0]{\infty}
+\newcommand{\zmod}[1]{\Z/{#1}\Z}
+\newcommand{\su}[0]{\sum_{n=0}^{\iy}}
+\newcommand{\suo}[0]{\sum_{n=1}^{\iy}}
+%\newcommand{\set}[2]{\left.\left\{{#1}\right|{#2}\right\}}
+%\newcommand{\sett}[2]{\left\{{#1}\left|{#2}\right\}\right.}
+\newcommand{\set}[2]{\left\{{#1}:{#2}\right\}}
+\newcommand{\sett}[2]{\left\{{#1}:{#2}\right\}}
+\newcommand{\ad}[0]{|\cdot|}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\sumr}[3]{\sum_{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}^{#3}}
+%Matrices
+\newcommand{\coltwo}[2]{
+\left(
+\begin{array} {c}
+{#1}\\
+{#2} 
+\end{array}
+\right)}
+\newcommand{\detm}[4]{
+\ab{
+\begin{matrix}
+{#1}&{#2}\\
+{#3}&{#4}
+\end{matrix}
+}}
+\newcommand{\sdetm}[4]{
+\ab{
+\begin{smallmatrix}
+{#1}&{#2}\\
+{#3}&{#4}
+\end{smallmatrix}
+}}
+\newcommand{\matt}[4]{
+\begin{pmatrix}
+{#1}&{#2}\\
+{#3}&{#4}
+\end{pmatrix}
+}
+\newcommand{\smatt}[4]{
+\left(\begin{smallmatrix} 
+{#1}&{#2}\\
+{#3}&{#4}
+\end{smallmatrix}\right)
+}
+\newcommand{\colthree}[3]{
+\begin{pmatrix}
+{#1}\\
+{#2}\\
+{#3}
+\end{pmatrix}
+}
+\newcommand{\ol}[1]{\overline{#1}}
+%Page breaks in equations
+\allowdisplaybreaks[1]
+\newcommand{\fixme}[1]{{\color{red}#1}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+%\addtolength{\headwidth}{\marginparwidth}
+\lhead{Section \thesection}
+\chead{} 
+\rhead{\thepage} 
+\lfoot{\small\scshape Subject} 
+\cfoot{} 
+\rfoot{\scriptsize Notes} % !! Remember to change the problem set number
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Contents of problem set
+%    
+\begin{document}
+\title{Topic}% !! Remember to change the problem set number
+\author{Holden Lee}
+\date{9/??/11}% !! Remember to change the date
+\maketitle
+\thispagestyle{empty}
+\section{}
+%\begin{thebibliography}{9}
+%\bibitem{rudin} Rudin, W.: "Principles of Mathematical Analysis," McGraw-Hill, CA, 1976.
+%\end{thebibliography}
+\end{document}

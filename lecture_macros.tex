@@ -1,0 +1,26 @@
+\newcommand{\whattosay}{}
+\titleformat{\section}{\centering \Large \bfseries}{}{0pt}{  \whattosay }
+\titleformat{\subsection}{ \large \bfseries}{}{0pt}{\S  \arabic{subsection} \ }
+
+\titlecontents{section}[0pt]{\bfseries}{\\ Lecture \thecontentslabel \hspace{2mm}}{}{}
+\titlecontents*{subsection}[0pt]{\small }{\,\,\,\,\, \textbf{\S \thecontentslabel} \,}{,
+}{\contentspage \, \, \,\,	  }
+
+
+%\ChNameVar{\centering \LARGE}
+%\ChNumVar{\centering \Huge}
+%\ChTitleVar{\Large}
+
+\newcommand{\lecturer}[1]{\newcommand{\thelecturer}{#1}}
+\newcommand{\courseassistant}[1]{\newcommand{\thecourseassistant}{#1}}
+\newcommand{\semester}[1]{\newcommand{\thesemester}{#1}}
+\newcommand{\coursenum}[1]{\newcommand{\thecoursenum}{#1}}
+\newcommand{\location}[1]{\newcommand{\thelocation}{#1}}
+\newcommand{\coursename}[1]{\newcommand{\thecoursename}{#1}}
+\newcommand{\scribe}[1]{\newcommand{\thescribe}{#1}}
+
+\providecommand{\chaptername}{}
+\renewcommand{\chaptername}{Lecture}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\newcommand{\lecture}[1]{\section{#1}}
+\newcommand{\thechapter}{Lecture \arabic{chapter}}
