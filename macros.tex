@@ -62,6 +62,7 @@
 \newcommand{\mx}[0]{\mathbf{x}}%idele x
 \newcommand{\my}[0]{\mathbf{y}}
 %More sequences of letters
+\newcommand{\et}[0]{_{\text{\'et}}}
 \newcommand{\Gm}[0]{\mathbb{G}_m}
 \newcommand{\Fp}[0]{\mathbb{F}_p}
 \newcommand{\fq}[0]{\mathbb{F}_q}
@@ -70,6 +71,7 @@
 \newcommand{\fqt}[0]{\mathbb{F}_q^{\times}}
 \newcommand{\Kt}[0]{K^{\times}}
 \newcommand{\RP}[0]{\mathbb{R}P}
+\newcommand{\qb}[0]{\ol{\mathbb{Q}}}
 \newcommand{\qp}[0]{\mathbb{Q}_p}
 \newcommand{\qpb}[0]{\ol{\mathbb{Q}_p}}
 \newcommand{\ql}[0]{\mathbb Q_{\ell}}
@@ -229,11 +231,13 @@
 \newcommand{\Abs}{(\text{Ab}/S)}
 \newcommand{\abk}{(\text{Ab}/k)}
 \newcommand{\abc}{(\text{Ab}/\C)}
+\newcommand{\Alb}{\operatorname{Alb}}
 \newcommand{\Ann}{\operatorname{Ann}}
 \newcommand{\Area}{\operatorname{Area}}
 \newcommand{\Ass}{\operatorname{Ass}}
 \newcommand{\Art}{\operatorname{Art}}
 \newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\avg}{\operatorname{avg}}
 \newcommand{\Bl}[0]{\operatorname{Bl}}
 \newcommand{\Br}{\operatorname{Br}}
 \newcommand{\chr}{\operatorname{char}}
@@ -259,7 +263,8 @@
 \newcommand{\diam}{\operatorname{diam}}
 \renewcommand{\div}{\operatorname{div}}
 \newcommand{\Div}{\operatorname{Div}}
-\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\Disc}{\operatorname{Disc}}%discrepancy
+\newcommand{\disc}{\operatorname{disc}}%discriminant
 \newcommand{\Ell}{\mathcal{E}{\rm{ll}}}
 \newcommand{\End}{\operatorname{End}}
 \newcommand{\Ext}{\operatorname{Ext}}
@@ -305,6 +310,7 @@
 \newcommand{\PDer}{\operatorname{PDer}}
 \newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Pico}{\operatorname{Pic}^{\circ}}
 \newcommand{\poly}{\operatorname{poly}}
 \newcommand{\PSL}{\operatorname{PSL}}
 \newcommand{\Per}{\operatorname{Per}}
@@ -565,6 +571,16 @@
 \newcommand{\Ac}[0]{\mathsf{AC}}
 \newcommand{\bias}[0]{\text{bias}}
 \newcommand{\EB}[0]{\text{EB}}
+%comp complexity
+\newcommand{\CLIQUE}[0]{\operatorname{\mathsf{CLIQUE}}}
+\newcommand{\SAT}[0]{\mathsf{SAT}}
+\newcommand{\EXP}[0]{\mathsf{EXP}}
+\newcommand{\SUBEXP}[0]{\mathsf{SUBEXP}}
+\newcommand{\TIME}[0]{\operatorname{\mathsf{TIME}}}
+\newcommand{\QuasiP}[0]{\mathsf{QuasiP}}
+\newcommand{\BPP}[0]{\mathsf{BPP}}
+\newcommand{\BPTIME}[0]{\operatorname{\mathsf{BPTIME}}}
+
 %EDITING HELP
 %blu: key idea or concept. red: unresolved issue/question. 
 \newcommand{\blu}[1]{{\color{blue}#1}}
@@ -588,6 +604,10 @@
 \newcommand{\itag}[1]{\index{#1}[\##1]}
 \newcommand{\arxiv}[1]{\url{http://www.arxiv.org/abs/#1}}
 
+%markup
+\newcommand{\vocab}[1]{\textbf{#1}} %also index automatically.
+\newcommand{\summq}[1]{\textbf{Summary Question: }#1}
+\newcommand{\keypt}[1]{{\it #1}}
 
 %Page breaks in equations
 \allowdisplaybreaks[2]
