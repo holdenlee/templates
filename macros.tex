@@ -10,15 +10,17 @@
 \newcommand{\cC}[0]{\mathcal{C}}
 \newcommand{\sD}[0]{\mathscr{D}}
 \newcommand{\mD}[0]{\mathfrak D}
-\newcommand{\cE}[0]{\mathscr{E}}
+\newcommand{\cE}[0]{\mathscr{E}}%deprecated
+\newcommand{\sE}[0]{\mathscr{E}}
 \newcommand{\E}[0]{\mathbb{E}}
 \newcommand{\EE}[0]{\mathop{\mathbb E}}
 %\scalebox{1.25}{$\mathbb E$}}
 \newcommand{\F}[0]{\mathbb{F}}
-\newcommand{\cF}[0]{\mathscr{F}}
+\newcommand{\cF}[0]{\mathscr{F}}%deprecated.
 \newcommand{\sF}[0]{\mathscr{F}}
 \newcommand{\G}[0]{\mathbb{G}}
-\newcommand{\cG}[0]{\mathscr{G}}
+\newcommand{\cG}[0]{\mathscr{G}}%deprecated.
+\newcommand{\sG}[0]{\mathscr{G}}
 \newcommand{\cH}[0]{\mathscr H}%deprecated
 \newcommand{\sH}[0]{\mathscr H}
 \newcommand{\Hq}[0]{\mathbb{H}}
@@ -141,6 +143,8 @@
 \newcommand{\fc}[2]{\frac{#1}{#2}}
 \newcommand{\sfc}[2]{\sqrt{\frac{#1}{#2}}}
 \newcommand{\pf}[2]{\pa{\frac{#1}{#2}}}%Shortcut for fraction with parentheses
+\DeclareRobustCommand{\stl}{\genfrac\{\}{0pt}{}}
+
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}%Partial derivatives
 \newcommand{\dd}[2]{\frac{d #1}{d #2}}
 \newcommand{\pdd}[1]{\frac{\partial}{\partial #1}}
@@ -199,6 +203,8 @@
 \newcommand{\sett}[2]{\left\{\left.{#1}\right|{#2}\right\}}
 
 %under and overlines, etc.
+\newcommand{\ch}[1]{\check{#1}}
+\newcommand{\dch}[1]{\check{\check{#1}}}
 \newcommand{\olra}[1]{\overleftrightarrow{#1}}
 \newcommand{\ol}[1]{\overline{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
@@ -234,6 +240,8 @@
 \newcommand{\Alb}{\operatorname{Alb}}
 \newcommand{\Ann}{\operatorname{Ann}}
 \newcommand{\Area}{\operatorname{Area}}
+\newcommand{\amax}{\operatorname{argmax}}
+\newcommand{\amin}{\operatorname{argmin}}
 \newcommand{\Ass}{\operatorname{Ass}}
 \newcommand{\Art}{\operatorname{Art}}
 \newcommand{\Aut}{\operatorname{Aut}}
@@ -270,6 +278,7 @@
 \newcommand{\Ell}{\mathcal{E}{\rm{ll}}}
 \newcommand{\End}{\operatorname{End}}
 \newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\err}{\operatorname{err}}
 \newcommand{\ess}{\operatorname{ess}}
 \newcommand{\ext}{\operatorname{ext}}
 \newcommand{\pfcg}{(p\text{-FCGp}/k)}
@@ -291,11 +300,13 @@
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\Id}{\operatorname{Id}}
 \newcommand{\im}[0]{\text{im}}
+\newcommand{\imp}[0]{\im^{\text{pre}}}
 \newcommand{\Ind}[0]{\operatorname{Ind}}
 \newcommand{\Inf}[0]{\operatorname{Inf}}
 \newcommand{\inv}[0]{\operatorname{inv}}
 \newcommand{\Isoc}[0]{\operatorname{Isoc}}
 \newcommand{\Isog}[0]{\operatorname{Isog}}
+\newcommand{\Isom}[0]{\operatorname{Isom}}
 \newcommand{\Jac}[0]{\operatorname{Jac}}
 \newcommand{\li}[0]{\operatorname{li}}
 \newcommand{\Li}[0]{\operatorname{li}}
@@ -314,6 +325,7 @@
 \newcommand{\Pic}{\operatorname{Pic}}
 \newcommand{\Pico}{\operatorname{Pic}^{\circ}}
 \newcommand{\poly}{\operatorname{poly}}
+\newcommand{\polylog}{\operatorname{polylog}}
 \newcommand{\PSL}{\operatorname{PSL}}
 \newcommand{\Per}{\operatorname{Per}}
 \newcommand{\PrePer}{\operatorname{PrePer}}
@@ -343,6 +355,7 @@
 \newcommand{\spp}{\operatorname{sp}}
 \newcommand{\spn}{\operatorname{span}}
 \newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\SU}{\operatorname{SU}}
 \newcommand{\Supp}{\operatorname{Supp}}
 \newcommand{\ssupp}{\operatorname{sing}\operatorname{supp}}
 \newcommand{\Sym}{\operatorname{Sym}}
@@ -447,6 +460,7 @@
 \newcommand{\su}[0]{\sum_{n=0}^{\iy}}
 \newcommand{\suo}[0]{\sum_{n=1}^{\iy}}
 \newcommand{\iiy}[0]{\int_0^{\infty}}
+\newcommand{\iiiy}[0]{\int_{-\infty}^{\infty}}
 \newcommand{\sui}[0]{\sum_{i=1}^{n}}
 \newcommand{\suiy}[0]{\sum_{i=1}^{\iy}}
 \newcommand{\cui}[0]{\bigcup_{i=1}^n}
@@ -614,6 +628,7 @@
 \newcommand{\vocab}[1]{\textbf{#1}} %also index automatically.
 \newcommand{\summq}[1]{\textbf{Summary Question: }#1}
 \newcommand{\keypt}[1]{{\it #1}}
+\newcommand{\subprob}[1]{\noindent\textbf{#1}\\}
 
 %Page breaks in equations
 \allowdisplaybreaks[2]
