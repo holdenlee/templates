@@ -1,0 +1,14 @@
+cmap
+ctable
+enumitem
+fancyhdr
+mathdots
+mathtools
+stmaryrd
+tikz
+titlesec
+titletoc
+wasysym
+wrapfig
+yhmath
+mpm --install=fancyhdr;mpm --install=mathdots;mpm --install=mathtools;mpm --install=stmaryrd;mpm --install=tikz;mpm --install=titlesec;mpm --install=titletoc;mpm --install=wasysym;mpm --install=wrapfig;mpm --install=yhmath

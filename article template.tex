@@ -4,15 +4,8 @@
 \input{\filepath/theorems_with_boxes.tex}
 \input{\filepath/macros.tex}
 \input{\filepath/formatting.tex}
-%\input{\filepath/other.tex}
-
-%\def\name{NAME}
-
-%\input{\filepath/titlepage.tex}
 
 \pagestyle{fancy}
-%\addtolength{\headwidth}{\marginparsep} %these change header-rule width
-%\addtolength{\headwidth}{\marginparwidth}
 \lhead{TITLE 1}
 \chead{} 
 \rhead{TITLE 2} 
@@ -20,15 +13,15 @@
 \cfoot{\thepage} 
 \rfoot{} 
 \renewcommand{\headrulewidth}{.3pt} 
-%\renewcommand{\footrulewidth}{.3pt}
 \setlength\voffset{0in}
 \setlength\textheight{648pt}
+
+\addbibresource{bib.bib}
 
 \begin{document}
 \section{Topic}
 
 %\input{chapters/1.tex}
- 
-%\bibliographystyle{plain}
-%\bibliography{refs}
+
+\printbibliography
 \end{document}
