@@ -226,6 +226,7 @@
 \newcommand{\btih}[1]{\text{ by the induction hypothesis{#1}}}
 \newcommand{\bwoc}[0]{by way of contradiction}
 \newcommand{\by}[1]{\text{by~(\ref{#1})}}
+\newcommand{\idk}[0]{{\color{red}I don't know.} }
 \newcommand{\ore}[0]{\text{ or }}
 \newcommand{\wog}[0]{ without loss of generality }
 \newcommand{\Wog}[0]{ Without loss of generality }
@@ -249,6 +250,7 @@
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\avg}{\operatorname{avg}}
 \newcommand{\bias}[0]{\operatorname{bias}}
+\newcommand{\Binom}{\operatorname{Binom}}
 \newcommand{\Bl}[0]{\operatorname{Bl}}
 \newcommand{\Br}{\operatorname{Br}}
 \newcommand{\chr}{\operatorname{char}}
@@ -274,9 +276,11 @@
 \newcommand{\diag}{\operatorname{diag}}
 \newcommand{\diam}{\operatorname{diam}}
 \renewcommand{\div}{\operatorname{div}}
+\newcommand{\Dir}{\operatorname{Dir}}
 \newcommand{\Div}{\operatorname{Div}}
 \newcommand{\Disc}{\operatorname{Disc}}%discrepancy
 \newcommand{\disc}{\operatorname{disc}}%discriminant
+\newcommand{\dom}{\operatorname{dom}}
 \newcommand{\Ell}{\mathcal{E}{\rm{ll}}}
 \newcommand{\Enc}{\operatorname{Enc}}
 \newcommand{\End}{\operatorname{End}}
@@ -327,6 +331,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\Pic}{\operatorname{Pic}}
 \newcommand{\Pico}{\operatorname{Pic}^{\circ}}
+\newcommand{\Pois}{\operatorname{Pois}}
 \newcommand{\poly}{\operatorname{poly}}
 \newcommand{\polylog}{\operatorname{polylog}}
 \newcommand{\PSL}{\operatorname{PSL}}
@@ -338,6 +343,7 @@
 \newcommand{\Prj}[0]{\textbf{Proj}}
 \newcommand{\QCoh}{\operatorname{QCoh}}
 \newcommand{\Rad}{\operatorname{Rad}}
+\newcommand{\range}{\operatorname{range}}
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\red}{\operatorname{red}}
 \newcommand{\Reg}{\operatorname{Reg}}
@@ -349,7 +355,9 @@
 \newcommand{\schk}{(\text{Sch}/k)}
 \newcommand{\se}{\text{se}}
 \newcommand{\hse}{\wh{\text{se}}}
+\newcommand{\sens}{\operatorname{sens}}
 \newcommand{\Set}{(\text{Set})}
+\newcommand{\sgn}{\operatorname{sign}}
 \newcommand{\sign}{\operatorname{sign}}
 \newcommand{\SL}{\operatorname{SL}}
 \newcommand{\SO}{\operatorname{SO}}
@@ -571,9 +579,6 @@
 %algebraic geometry
 \newcommand{\av}[0]{A^{\vee}}
 
-%complexity theory
-\newcommand{\NP}[0]{\operatorname{\mathsf{NP}}}
-\newcommand{\PCP}[0]{\operatorname{\mathsf{PCP}}}
 
 %arithmetic combinatorics
 \newcommand{\Deq}[1]{\Delta^{\times}_{#1}}
@@ -594,14 +599,19 @@
 \newcommand{\Ac}[0]{\mathsf{AC}}
 \newcommand{\EB}[0]{\text{EB}}
 %comp complexity
-\newcommand{\CLIQUE}[0]{\operatorname{\mathsf{CLIQUE}}}
-\newcommand{\SAT}[0]{\mathsf{SAT}}
-\newcommand{\EXP}[0]{\mathsf{EXP}}
-\newcommand{\SUBEXP}[0]{\mathsf{SUBEXP}}
-\newcommand{\TIME}[0]{\operatorname{\mathsf{TIME}}}
-\newcommand{\QuasiP}[0]{\mathsf{QuasiP}}
+%complexity theory
+\newcommand{\ACC}[0]{\operatorname{\mathsf{ACC}}}
 \newcommand{\BPP}[0]{\mathsf{BPP}}
 \newcommand{\BPTIME}[0]{\operatorname{\mathsf{BPTIME}}}
+\newcommand{\CLIQUE}[0]{\operatorname{\mathsf{CLIQUE}}}
+\newcommand{\EXP}[0]{\mathsf{EXP}}
+\newcommand{\NEXP}[0]{\mathsf{NEXP}}
+\newcommand{\NP}[0]{\operatorname{\mathsf{NP}}}
+\newcommand{\NTIME}[0]{\operatorname{\mathsf{NTIME}}}
+\newcommand{\PCP}[0]{\operatorname{\mathsf{PCP}}}
+\newcommand{\SAT}[0]{\mathsf{SAT}}
+\newcommand{\SUBEXP}[0]{\mathsf{SUBEXP}}
+\newcommand{\TIME}[0]{\operatorname{\mathsf{TIME}}}
 \newcommand{\zz}{\textcircled{Z}}
 %statistics
 \newcommand{\hten}[0]{\widehat{\theta_n}}
@@ -628,13 +638,21 @@
 %%%%%%%%%%%
 
 \newcommand{\itag}[1]{\index{#1}[\##1]}
+\newcommand{\ilbl}[1]{\index{#1}[#1]}
+\newcommand{\iadd}[1]{\index{#1} #1}
 \newcommand{\arxiv}[1]{\url{http://www.arxiv.org/abs/#1}}
 
 %markup
+\newcommand{\ivocab}[1]{\index{#1}\textbf{#1}}
 \newcommand{\vocab}[1]{\textbf{#1}} %also index automatically.
 \newcommand{\summq}[1]{\textbf{Summary Question: }#1}
 \newcommand{\keypt}[1]{{\it #1}}
 \newcommand{\subprob}[1]{\noindent\textbf{#1}\\}
+\newcommand{\qatable}[1]{\begin{center}
+    \begin{longtable}{ | p{5.5cm} | p{10cm} |}
+#1
+\end{longtable}
+\end{center}}
 
 %Page breaks in equations
 \allowdisplaybreaks[2]
