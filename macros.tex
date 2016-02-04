@@ -132,6 +132,14 @@
 \newcommand{\mcv}[0]{*_-}
 \newcommand{\dlim}[0]{\varinjlim}
 \newcommand{\ilim}[0]{\varprojlim}
+\newcommand{\gle}[0]{\begin{array}{c}
+\ge\\
+\le
+\end{array}}
+\newcommand{\lge}[0]{\begin{array}{c}
+\le\\
+\ge
+\end{array}}
 %\stackrel{-}{*}}%minus convoluion.
 
 %COMMON TIME-SAVERS
@@ -221,6 +229,7 @@
 \newcommand{\rp}[1]{^{\overline{#1}}}
 \newcommand{\sh}[0]{^{\sharp}}
 \newcommand{\ri}[0]{\ddagger}%replace this with rosati involution
+\newcommand{\bit}[0]{\{0,1\}}
 
 %TEXT
 \newcommand{\btih}[1]{\text{ by the induction hypothesis{#1}}}
@@ -354,6 +363,7 @@
 \newcommand{\schs}{(\text{Sch}/S)}
 \newcommand{\schk}{(\text{Sch}/k)}
 \newcommand{\se}{\text{se}}
+\newcommand{\srank}{\text{srank}}
 \newcommand{\hse}{\wh{\text{se}}}
 \newcommand{\sens}{\operatorname{sens}}
 \newcommand{\Set}{(\text{Set})}
@@ -638,7 +648,7 @@
 %%%%%%%%%%%
 
 \newcommand{\itag}[1]{\index{#1}[\##1]}
-\newcommand{\ilbl}[1]{\index{#1}[#1]}
+\newcommand{\ilbl}[1]{[#1]\index{#1}}
 \newcommand{\iadd}[1]{\index{#1} #1}
 \newcommand{\arxiv}[1]{\url{http://www.arxiv.org/abs/#1}}
 
