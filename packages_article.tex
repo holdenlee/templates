@@ -50,8 +50,17 @@
 \usepackage[all,cmtip]{xy}%Commutative diagrams
 %\usepackage[usenames,dvipsnames]{xcolor}%tikz loads xcolor
 
+
+\usepackage[usenames,dvipsnames]{color} % Required for specifying custom colors and referring to colors by name
+\usepackage[pdftex]{hyperref} % For hyperlinks in the PDF
+\hypersetup{
+  colorlinks=true,
+  linkcolor=MyBlue, 
+  citecolor=MyRed,
+  urlcolor= MyBlue
+}
 %load hyperref last
-\usepackage{hyperref}
+%\usepackage{hyperref}
 %\usepackage{listings}
 %\lstset{
 %	basicstyle=\small\ttfamily,
