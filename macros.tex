@@ -16,7 +16,7 @@
 \newcommand{\EE}[0]{\mathop{\mathbb E}}
 %\scalebox{1.25}{$\mathbb E$}}
 \newcommand{\F}[0]{\mathbb{F}}
-\newcommand{\cF}[0]{\mathscr{F}}%deprecated.
+\newcommand{\cF}[0]{\mathcal{F}}
 \newcommand{\sF}[0]{\mathscr{F}}
 \newcommand{\G}[0]{\mathbb{G}}
 \newcommand{\cG}[0]{\mathscr{G}}%deprecated.
@@ -29,7 +29,9 @@
 \newcommand{\cI}[0]{\mathscr{I}}%deprecated
 \newcommand{\sI}[0]{\mathscr{I}}
 \newcommand{\cJ}[0]{\mathscr{J}}
+\newcommand{\cK}[0]{\mathcal{K}}
 \newcommand{\cL}[0]{\mathscr{L}}
+\newcommand{\mM}[0]{\mathfrak{M}}
 \newcommand{\N}[0]{\mathbb{N}}
 \newcommand{\fN}[0]{\mathfrak{N}}
 \newcommand{\cP}[0]{\mathcal{P}}
@@ -41,7 +43,7 @@
 \newcommand{\sO}[0]{\mathscr{O}}
 \newcommand{\Q}[0]{\mathbb{Q}}
 \newcommand{\R}[0]{\mathbb{R}}
-\newcommand{\bS}[0]{\mathbb{bS}}
+\newcommand{\bS}[0]{\mathbb{S}}
 \newcommand{\T}[0]{\mathbb{T}}
 \newcommand{\X}[0]{\mathfrak{X}}
 \newcommand{\Z}[0]{\mathbb{Z}}
@@ -117,6 +119,7 @@
 \newcommand{\ot}[0]{\otimes}
 \newcommand{\bigot}[0]{\bigotimes}
 \newcommand{\sub}[0]{\subset}
+\newcommand{\nsub}[0]{\not\subset}
 \newcommand{\subeq}[0]{\subseteq}
 \newcommand{\supeq}[0]{\supseteq}
 \newcommand{\nsubeq}[0]{\not\subseteq}
@@ -206,6 +209,7 @@
 \newcommand{\pat}[1]{\left( \text{#1} \right)}
 \newcommand{\ve}[1]{\left\Vert {#1}\right\Vert}
 \newcommand{\nv}[1]{\frac{#1}{\left\Vert {#1}\right\Vert}}
+\newcommand{\nvl}[2]{\frac{#1}{\left\Vert {#1}\right\Vert_{#2}}}
 \newcommand{\rb}[1]{\left.{#1}\right|}
 \newcommand{\nl}[1]{\left\Vert #1 \right\Vert_{L^1}}
 \newcommand{\ad}[0]{|\cdot|}
@@ -228,6 +232,7 @@
 %other
 \newcommand{\fp}[1]{^{\underline{#1}}}%Falling power
 \newcommand{\rp}[1]{^{\overline{#1}}}
+\newcommand{\pp}[1]{^{(#1)}}
 \newcommand{\sh}[0]{^{\sharp}}
 \newcommand{\ri}[0]{\ddagger}%replace this with rosati involution
 \newcommand{\bit}[0]{\{0,1\}}
@@ -260,6 +265,7 @@
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\avg}{\operatorname{avg}}
 \newcommand{\bias}[0]{\operatorname{bias}}
+\newcommand{\Bin}{\operatorname{Bin}}
 \newcommand{\Binom}{\operatorname{Binom}}
 \newcommand{\Bl}[0]{\operatorname{Bl}}
 \newcommand{\Br}{\operatorname{Br}}
@@ -331,6 +337,7 @@
 \newcommand{\Li}[0]{\operatorname{li}}
 \newcommand{\Lie}[0]{\operatorname{Lie}}
 \newcommand{\Line}[0]{\operatorname{Line}}
+\newcommand{\Lip}[0]{\operatorname{Lip}}
 \newcommand{\lcm}[0]{\operatorname{lcm}}
 \newcommand{\Mat}{\operatorname{Mat}}
 \newcommand{\Mod}{\operatorname{Mod}}
@@ -484,11 +491,25 @@
 %SUMS, ETC.
 \newcommand{\sumr}[2]{\sum_{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}}%sum with 2 rows
 \newcommand{\prr}[2]{\prod_{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}}%product with 2 rows
+\newcommand{\maxr}[2]{\max_{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}}%product with 2 rows
+\newcommand{\minr}[2]{\min_{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}}%product with 2 rows
+\newcommand{\trow}[2]{\scriptsize \begin{array}{c}{#1}\\{#2}\end{array}}
+\newcommand{\seqo}[3]{\{#3\}_{#1=1}^{#2}}
+\newcommand{\seqos}[3]{\{#3_#1\}_{#1=1}^{#2}}
+\newcommand{\seqz}[3]{\{#3\}_{#1=0}^{#2}}
+\newcommand{\seqzs}[3]{\{#3_#1\}_{#1=0}^{#2}}
 \newcommand{\su}[0]{\sum_{n=0}^{\iy}}
 \newcommand{\suo}[0]{\sum_{n=1}^{\iy}}
 \newcommand{\sumo}[2]{\sum_{#1=1}^{#2}}
+\newcommand{\sumz}[2]{\sum_{#1=0}^{#2}}
+\newcommand{\prodo}[2]{\prod_{#1=1}^{#2}}
+\newcommand{\prodz}[2]{\prod_{#1=0}^{#2}}
+\newcommand{\oplo}[2]{\bigopl_{#1=1}^{#2}}
+\newcommand{\cupo}[2]{\bigcup_{#1=1}^{#2}}
+\newcommand{\capo}[2]{\bigcap_{#1=1}^{#2}}
 \newcommand{\iiy}[0]{\int_0^{\infty}}
-\newcommand{\iiiy}[0]{\int_{-\infty}^{\infty}}
+\newcommand{\iny}[0]{\int_{-\infty}^{\infty}}
+\newcommand{\iiiy}[0]{\int_{-\infty}^{\infty}}%DEPRECATED
 \newcommand{\sui}[0]{\sum_{i=1}^{n}}
 \newcommand{\suiy}[0]{\sum_{i=1}^{\iy}}
 \newcommand{\cui}[0]{\bigcup_{i=1}^n}
@@ -499,6 +520,11 @@
 %MATRICES
 
 %Matrices
+\newcommand{\scoltwo}[2]{
+\left(\begin{smallmatrix}
+{#1}\\
+{#2}
+\end{smallmatrix}\right)}
 \newcommand{\coltwo}[2]{
 \begin{pmatrix}
 {#1}\\
@@ -509,6 +535,14 @@
 {#1}\\
 {#2}\\
 {#3}
+\end{pmatrix}
+}
+\newcommand{\colfour}[4]{
+\begin{pmatrix}
+{#1}\\
+{#2}\\
+{#3}\\
+{#4}
 \end{pmatrix}
 }
 \newcommand{\cth}[3]{
@@ -544,6 +578,13 @@
 {#3}&{#4}
 \end{smallmatrix}\right)
 }
+\newcommand{\mattn}[9]{
+\begin{pmatrix}
+{#1}&{#2}&{#3}\\
+{#4}&{#5}&{#6}\\
+{#7}&{#8}&{#9}
+\end{pmatrix}
+}
 
 \newcommand{\bt}[2]{
 \left\{\begin{matrix}
@@ -559,6 +600,23 @@
 \end{matrix}
 \right\}}
 
+\newcommand{\tcase}[4]{
+\begin{cases}
+#1 & #2\\
+#3 & #4
+\end{cases}}
+\newcommand{\txcase}[4]{
+\begin{cases}
+#1 & \text{#2}\\
+#3 & \text{#4}
+\end{cases}}
+
+\newcommand{\ifoth}[3]{
+\begin{cases}
+#1 & \text{if }#2\\
+#3 & \text{otherwise}
+\end{cases}}
+
 %EQUATIONS
 \newcommand{\beq}[1]{\begin{equation}\llabel{#1}}
 \newcommand{\eeq}[0]{\end{equation}}
@@ -567,6 +625,7 @@
 \newcommand{\ban}[0]{\begin{align}}
 \newcommand{\ean}[0]{\end{align}}
 \newcommand{\ig}[2]{\begin{center}\includegraphics[scale=#2]{#1}\end{center}}
+\newcommand{\ign}[2]{\includegraphics[scale=#2]{#1}}
 
 %COURSE-SPECIFIC
 
@@ -605,6 +664,7 @@
 \newcommand{\Dict}[0]{\operatorname{\mathsf{Dict}}}
 \newcommand{\Maj}[0]{\operatorname{\mathsf{Maj}}}
 \newcommand{\MAJ}[0]{\operatorname{\mathsf{Maj}}}
+\newcommand{\Parity}[0]{\operatorname{\mathsf{Parity}}}
 \newcommand{\Tribes}[0]{\operatorname{\mathsf{Tribes}}}
 \newcommand{\Ns}[0]{\operatorname{NS}}
 \newcommand{\DT}[0]{\operatorname{\mathsf{DT}}}
