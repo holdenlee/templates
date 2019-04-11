@@ -62,6 +62,10 @@
 %}
 %load hyperref last
 \usepackage{hyperref}
+%https://tex.stackexchange.com/questions/96350/problem-with-algorithmic-and-hyperref
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
 %\usepackage{listings}
 %\lstset{
 %	basicstyle=\small\ttfamily,
@@ -70,7 +74,7 @@
 %	xleftmargin=16pt,
 %}
 %this causes an error. No idea why
-\usepackage[backend=biber,style=alphabetic]{biblatex}
+\usepackage[backend=biber,style=alphabetic,maxbibnames=99]{biblatex}
 
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,shapes,%
